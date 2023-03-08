@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='rich-konsole',
-    version='1.0',
+    version='1.0.1',
     description='Better console outputs!',
     author='MysticAlgo',
     author_email='mysticalgomaster@gmail.com',

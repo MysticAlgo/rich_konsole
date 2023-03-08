@@ -54,25 +54,25 @@ class konsole:
 	def raw(cls, message, from_print = False):
 		if message.isspace(): return
 		formatted_text = cls.format_print(str(message).split("\n"))
-		cls.terminal(formatted_text)
+		cls.terminal(f"{formatted_text}{cls.style.RESET}")
 
 
 	@classmethod
 	def info(cls, message):
 		formatted_text = cls.format_print(str(message).split("\n"), "INFO", cls.style.BLUE, cls.style.AQUA)
-		cls.terminal(formatted_text)
+		cls.terminal(f"{formatted_text}{cls.style.RESET}")
 
 	
 	@classmethod
 	def warn(cls, message):
 		formatted_text = cls.format_print(str(message).split("\n"), "WARN", cls.style.GOLD, cls.style.YELLOW)
-		cls.terminal(formatted_text)
+		cls.terminal(f"{formatted_text}{cls.style.RESET}")
 	
 
 	@classmethod
 	def error(cls, message):
 		formatted_text = cls.format_print(str(message).split("\n"), "ERROR", cls.style.DARK_RED, cls.style.LIGHT_RED)
-		cls.terminal(formatted_text)
+		cls.terminal(f"{formatted_text}{cls.style.RESET}")
 
 
 	@classmethod
